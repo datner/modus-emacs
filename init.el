@@ -527,6 +527,9 @@ run the attached function (if exists) and enable lsp"
 (setq whitespace-style '(face trailing))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+;; Start Emacs server
+(server-start)
+
 ;; Set customization file path
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
