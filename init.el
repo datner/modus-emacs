@@ -431,6 +431,9 @@ run the attached function (if exists) and enable lsp"
 (use-package lsp-python-ms
   :init (setq lsp-python-ms-auto-install-server t))
 
+;; Init pip-requirements for editing pip requirements files
+(use-package pip-requirements)
+
 ;; Init js2-mode for enhanced JavaScript editing
 (use-package js2-mode
   :mode "\\.js\\'")
