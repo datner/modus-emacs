@@ -476,6 +476,9 @@ run the attached function (if exists) and enable lsp"
 ;; Init go-mode for Go support
 (use-package go-mode)
 
+;; Init csharp-mode for C# support
+(use-package csharp-mode)
+
 ;; Init lsp-python-ms for MS python language server
 (use-package lsp-python-ms
   :init (setq lsp-python-ms-auto-install-server t))
