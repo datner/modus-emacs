@@ -403,6 +403,7 @@ DIR must include a .project file to be considered a project."
                                   typescript-mode
                                   json-mode
                                   dockerfile-mode
+                                  terraform-mode
                                   sh-mode))
 
   (defun mo-maybe-enable-lsp (lsp-config)
