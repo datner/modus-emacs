@@ -505,6 +505,10 @@ run the attached function (if exists) and enable lsp"
 ;; Init typescript-mode for enhanced TypeScript editing
 (use-package typescript-mode)
 
+;; Init web-mode for enhanced web files editing
+(use-package web-mode
+  :mode "\\.html?\\'" "\\.htm?\\'")
+
 ;; Init json mode for enhanced JSON editing
 (use-package json-mode)
 
