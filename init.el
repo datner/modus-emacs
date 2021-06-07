@@ -398,6 +398,7 @@ DIR must include a .project file to be considered a project."
                                   c++-mode
                                   go-mode
                                   csharp-mode
+                                  java-mode
                                   (python-mode (lambda () (require 'lsp-python-ms)))
                                   js2-mode
                                   typescript-mode
@@ -492,6 +493,11 @@ run the attached function (if exists) and enable lsp"
 
 ;; Init csharp-mode for C# support
 (use-package csharp-mode)
+
+;; Init lsp-java for Eclipse JDT language server
+(use-package lsp-java
+  :config
+  (setq lsp-java-workspace-dir (mo-cache-path "workspace")))
 
 ;; Init lsp-python-ms for MS python language server
 (use-package lsp-python-ms
