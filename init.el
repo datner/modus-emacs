@@ -436,6 +436,7 @@ DIR must include a .project file to be considered a project."
                                   (python-mode (lambda () (require 'lsp-python-ms)))
                                   js2-mode
                                   typescript-mode
+                                  groovy-mode
                                   web-mode
                                   json-mode
                                   yaml-mode
