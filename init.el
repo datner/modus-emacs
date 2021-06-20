@@ -388,6 +388,7 @@ DIR must include a .project file to be considered a project."
   ("C-c s" #'treemacs)
   :config
   (setq treemacs-persist-file (mo-cache-path "treemacs-persist"))
+  (setq treemacs-width 50)
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-fringe-indicator-mode 'always)
