@@ -277,12 +277,20 @@ DIR must include a .project file to be considered a project."
 ;; Init consult for enhanced search commands
 (use-package consult
   :demand t
+  :init
+  (defun mo-project-switch-to-buffer ()
+    "Switch buffer in project using consult's buffer selector"
+    (interactive)
+    (setq unread-command-events (append unread-command-events (list ?p 32)))
+    (consult-buffer))
+
   :general
   ;; C-c bindings (mode-specific-map)
   ("C-c h" #'consult-history)
   ("C-c m" #'consult-mode-command)
   ("C-c b" #'consult-bookmark)
   ("C-c k" #'consult-kmacro)
+  ("C-c p" #'mo-project-switch-to-buffer)
   ;; C-x bindings (ctl-x-map)
   ("C-x M-:" #'consult-complex-command)     ;; orig. repeat-complex-command
   ("C-x b" #'consult-buffer)                ;; orig. switch-to-buffer
@@ -405,7 +413,8 @@ DIR must include a .project file to be considered a project."
 (use-package tab-bar-lost-commands
   :general
   (:keymaps 'mo-quick-menu-map
-   "t" #'tab-bar-lost-commands-switch-to-or-create-tab))
+   "t" #'tab-bar-lost-commands-switch-to-or-create-tab
+   "T" #'tab-bar-close-tab))
 
 ;; Init treemacs for a tree-like sidebar file navigator
 (use-package treemacs
