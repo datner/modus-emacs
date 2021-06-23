@@ -422,6 +422,8 @@ DIR must include a .project file to be considered a project."
 (use-package treemacs
   :general
   ("C-c s" #'treemacs)
+  ;; We want to present the current project only
+  ("C-c S" #'treemacs-display-current-project-exclusively)
   :config
   (setq treemacs-persist-file (mo-cache-path "treemacs-persist"))
   (setq treemacs-width 50)
