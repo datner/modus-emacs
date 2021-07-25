@@ -704,7 +704,7 @@ run the attached function (if exists) and enable lsp"
 
 ;; Init web-mode for enhanced web files editing
 (use-package web-mode
-  :mode "\\.html?\\'" "\\.htm?\\'")
+  :mode "\\.html?\\'" "\\.htm?\\'" "\\.tsx?\\'")
 
 ;; Init json mode for enhanced JSON editing
 (use-package json-mode)
