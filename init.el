@@ -910,6 +910,12 @@ run the attached function (if exists) and enable lsp"
   ("s-+" #'zoom-in/out)
   ("s-=" #'zoom-in/out))
 
+;; Init emojify to show pretty emojis :sunglasses:
+(use-package emojify
+  :config
+  (global-emojify-mode
+   (setq emojify-emojis-dir (mo-cache-path "emojis"))))
+
 ;; Cleanup the frame UI
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
