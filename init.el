@@ -710,6 +710,12 @@ run the attached function (if exists) and enable lsp"
 (use-package web-mode
   :mode "\\.html?\\'" "\\.htm?\\'" "\\.tsx?\\'")
 
+;; Init prettier-js-mode for opinionated web-dev formatting
+(use-package prettier-js
+  :hook
+  (web-mode . prettier-js-mode)
+  (js2-mode . prettier-js-mode))
+
 ;; Init json mode for enhanced JSON editing
 (use-package json-mode)
 
